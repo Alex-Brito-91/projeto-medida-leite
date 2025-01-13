@@ -7,20 +7,29 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: 100vh;
     margin: 0;
+    position: relative;
+}
+
+header, footer {
+    background-color: #dda0dd; /* Roxo claro */
+    color: #ffffff; /* Branco */
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
 }
 
 .container {
     display: flex;
-    align-items: flex-start; /* Alinhar ao topo */
+    align-items: center; /* Alinhar ao centro */
+    position: relative;
 }
 
 .mamadeira {
-    width: 500px; /* Aumentar o tamanho da imagem */
-    height: 500px; /* Aumentar o tamanho da imagem */
-    margin-left: 5px; /* Reduzir o espaço entre a imagem e o conteúdo */
+    width: 300px; /* Diminuir o tamanho da imagem */
+    height: 300px; /* Diminuir o tamanho da imagem */
 }
 
 .content {
@@ -28,7 +37,7 @@ body {
 }
 
 h1 {
-    color: #dda0dd; /* Roxo claro */
+    color: #ffffff; /* Branco */
     text-shadow: 1px 1px 2px #000000; /* Contorno preto */
 }
 
