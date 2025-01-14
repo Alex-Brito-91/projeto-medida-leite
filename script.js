@@ -1,20 +1,40 @@
 function calcularMedidas() {
-    const leiteAtual = document.getElementById('quantidadeLeite').value; // Quantidade de leite inserida pelo usuário em ml
-    const totalLeite = 150; // Total de leite necessário em ml
-    const medida = 15; // Quantidade de leite por medida em ml
-    const leiteFaltante = totalLeite - leiteAtual;
-    let quantidadeMedidas = leiteFaltante / medida;
-    let decimal = quantidadeMedidas % 1;
+    var quantidadeLeite = document.getElementById('quantidadeLeite').value;
 
-    if (decimal > 0.8) {
-        quantidadeMedidas = Math.ceil(quantidadeMedidas);
-    } else if (decimal < 0.3) {
-        quantidadeMedidas = Math.floor(quantidadeMedidas);
-    } else {
-        quantidadeMedidas = Math.floor(quantidadeMedidas) + 0.5;
+    if (quantidadeLeite >= 150) {
+        document.getElementById('resultado').innerText = 'Por favor, insira um valor menor que 150 ml.';
+        return;
     }
 
-    document.getElementById('resultado').innerText = `Você precisa de ${quantidadeMedidas.toFixed(1)} medidas e ${leiteFaltante}ml para completar 150ml de leite.`;
+    var resultado = quantidadeLeite / 15; // 1 medida para cada 15ml
+    var resultadoFormatado;
+    var meiaMedida = false;
+
+    // Arredondar conforme solicitado
+    if (resultado % 1 > 0.5) {
+        resultadoFormatado = Math.ceil(resultado);
+    } else if (resultado % 1 < 0.5) {
+        resultadoFormatado = Math.floor(resultado);
+    } else {
+        resultadoFormatado = Math.floor(resultado) + 0.5;
+        meiaMedida = true;
+    }
+
+    var mlRestantes = 150 - quantidadeLeite; // Calcular os ml restantes para completar 150ml
+    var medidasRestantes = Math.floor(mlRestantes / 15); // Calcular as medidas restantes inteiras
+    var textoMedidasRestantes = medidasRestantes + ' medidas';
+
+    if (mlRestantes % 15 > 0) {
+        if (mlRestantes % 15 >= 7.5) {
+            textoMedidasRestantes = medidasRestantes + ' medidas e meia';
+        } else {
+            textoMedidasRestantes = medidasRestantes + ' medidas e meia';
+        }
+    }
+
+    var resultadoTexto = 'Faltam ' + mlRestantes + ' ml (' + textoMedidasRestantes + ') para completar 150 ml.';
+
+    document.getElementById('resultado').innerText = resultadoTexto;
 }
 
 function zerarInput() {
