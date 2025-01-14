@@ -27,7 +27,6 @@ header, footer {
     position: fixed;
     left: 0;
     right: 0;
-    border-bottom: 5px solid #ffeb3b; /* Borda amarela abaixo do cabeçalho */
 }
 
 header {
