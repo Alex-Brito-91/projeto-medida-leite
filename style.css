@@ -114,6 +114,6 @@ button:hover {
 
 p#resultado {
     margin-top: 40px; /* Aumentar a margem superior para mover o texto mais para baixo */
-    font-size: 18px;
+    font-size: 22px; /* Aumentar o tamanho do texto */
     color: #000000; /* Preto */
 }
