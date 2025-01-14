@@ -52,7 +52,6 @@ footer {
     height: 270px; /* Diminuir o tamanho da imagem */
     position: absolute;
     z-index: -1; /* Colocar a imagem atrás dos componentes */
-    opacity: 0.5; /* Tornar a imagem semi-transparente */
     left: 160px; /* Ajustar a posição para a direita */
     top: 50px;
 }
