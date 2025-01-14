@@ -32,7 +32,7 @@ function calcularMedidas() {
         }
     }
 
-    var resultadoTexto = 'Faltam ' + mlRestantes + ' ml (' + textoMedidasRestantes + ') para completar 150 ml.';
+    var resultadoTexto = 'Faltam ' + mlRestantes + 'ml (' + textoMedidasRestantes + ') para completar 150ml.';
 
     document.getElementById('resultado').innerText = resultadoTexto;
 }
