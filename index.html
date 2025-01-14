@@ -12,14 +12,16 @@
         <h1>Calculadora de Medidas de Leite</h1>
     </header>
     <div class="container">
-        <img src="mamadeira.png" alt="Mamadeira" class="mamadeira">
         <div class="content">
             <label for="quantidadeLeite">Quantidade de leite que você tem (ml):</label>
-            <input type="number" id="quantidadeLeite" name="quantidadeLeite" step="10">
-            <button onclick="calcularMedidas()">Calcular Medidas</button>
-            <button onclick="zerarInput()">Zerar</button>
+            <div class="input-button-container">
+                <input type="number" id="quantidadeLeite" name="quantidadeLeite" step="10">
+                <button onclick="calcularMedidas()">Calcular Medidas</button>
+                <button onclick="zerarInput()">Zerar</button>
+            </div>
             <p id="resultado"></p>
         </div>
+        <img src="mamadeira.png" alt="Mamadeira" class="mamadeira">
     </div>
     <footer>
         <p>© 2023 Calculadora de Medidas de Leite</p>
