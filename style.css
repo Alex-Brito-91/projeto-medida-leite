@@ -55,7 +55,7 @@ footer {
     height: 270px; /* Diminuir o tamanho da imagem */
     position: absolute;
     z-index: -1; /* Colocar a imagem atrás dos componentes */
-    left: 160px; /* Ajustar a posição para a direita */
+    left: 180px; /* Ajustar a posição para a direita */
     top: 50px;
 }
 
@@ -74,7 +74,7 @@ label {
     display: block;
     margin: 20px 0 10px;
     color: #000000; /* Preto */
-    font-size: 24px; /* Aumentar o tamanho do texto */
+    font-size: 28px; /* Aumentar o tamanho do texto */
 }
 
 .input-button-container {
@@ -92,7 +92,7 @@ input[type="number"], button {
     background-color: #fffacd; /* Amarelo bem claro, tipo creme */
     color: #000000; /* Preto */
     font-family: 'Annie Use Your Telescope', serif; /* Fonte Annie Use Your Telescope */
-    font-size: 18px; /* Aumentar o tamanho do texto dos botões */
+    font-size: 24px; /* Aumentar o tamanho do texto dos botões */
     cursor: pointer;
     margin: 5px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombreamento */
