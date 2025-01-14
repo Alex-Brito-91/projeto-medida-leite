@@ -5,24 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Medidas de Leite</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
         <h1>Calculadora de Medidas de Leite</h1>
     </header>
-    <div class="container">
-        <div class="content">
-            <label for="quantidadeLeite">Quantidade de leite que você tem (ml):</label>
+
+    <main class="container">
+        <section class="content">
+            <label for="quantidadeLeite">Quantidade de leite atual (ml):</label>
             <div class="input-button-container">
-                <input type="number" id="quantidadeLeite" name="quantidadeLeite" step="10">
+                <input type="number" id="quantidadeLeite" name="quantidadeLeite" step="10" required>
                 <button onclick="calcularMedidas()">Calcular Medidas</button>
                 <button onclick="zerarInput()">Zerar</button>
             </div>
             <p id="resultado"></p>
-        </div>
+        </section>
         <img src="mamadeira.png" alt="Mamadeira" class="mamadeira">
-    </div>
+    </main>
+
     <footer>
         <p>© 2025 Calculadora de Medidas de Leite</p>
     </footer>

@@ -1,11 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap');
 
+header {
+    top: 0;
+    border-bottom: 5px solid #ffeb3b; /* Borda amarela no cabeçalho */
+}
+
+header, footer {
+    background-color: #add8e6;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000000;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    border-color: #ffeb3b;
+}
+
 body {
-    background-color: #ffffff; /* Branco */
-    color: #dda0dd; /* Roxo claro */
+    background-color: #ffffff;
+    color: #dda0dd;
     font-family: 'Annie Use Your Telescope', serif;
-    font-weight: 400;
-    font-style: normal;
     text-align: center;
     padding: 20px;
     display: flex;
@@ -17,105 +33,85 @@ body {
     position: relative;
 }
 
-header, footer {
-    background-color: #add8e6; /* Azul bebê */
-    color: #ffffff; /* Branco */
-    text-shadow: 1px 1px 2px #000000; /* Contorno preto */
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-    position: fixed;
-    left: 0;
-    right: 0;
-}
-
-header {
-    top: 0;
-    border-bottom: 5px solid #ffeb3b; /* Borda amarela abaixo do cabeçalho */
-}
-
-footer {
-    bottom: 0;
-    border-top: 5px solid #ffeb3b; /* Borda amarela acima do rodapé */
+h1 {
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000000;
 }
 
 .container {
     display: flex;
-    align-items: center; /* Alinhar ao centro */
-    justify-content: center; /* Centralizar horizontalmente */
-    flex-direction: column; /* Colocar elementos em coluna */
+    flex-direction: column;
+    align-items: center;
     position: relative;
-    margin-top: 150px; /* Aumentar o espaço para o cabeçalho fixo */
-    margin-bottom: 100px; /* Espaço para o rodapé fixo */
-}
-
-.mamadeira {
-    width: 270px; /* Diminuir o tamanho da imagem */
-    height: 270px; /* Diminuir o tamanho da imagem */
-    position: absolute;
-    z-index: -1; /* Colocar a imagem atrás dos componentes */
-    left: 180px; /* Ajustar a posição para a direita */
-    top: 50px;
+    margin-top: 150px;
+    margin-bottom: 100px;
 }
 
 .content {
-    text-align: left; /* Alinhar o texto à esquerda */
+    text-align: left;
     position: relative;
-    z-index: 1; /* Garantir que o conteúdo fique acima da imagem */
-}
-
-h1 {
-    color: #ffffff; /* Branco */
-    text-shadow: 1px 1px 2px #000000; /* Contorno preto */
+    z-index: 1;
 }
 
 label {
     display: block;
     margin: 20px 0 10px;
-    color: #000000; /* Preto */
-    font-size: 28px; /* Aumentar o tamanho do texto */
+    color: #000000;
+    font-size: 28px;
 }
 
 .input-button-container {
     display: flex;
-    flex-direction: column; /* Colocar elementos em coluna */
-    align-items: flex-start; /* Alinhar ao lado esquerdo */
-    gap: 10px; /* Espaço entre o input e o botão */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
 }
 
 input[type="number"], button {
     padding: 10px;
-    border: 2px solid #ffeb3b; /* Borda amarela */
+    border: 2px solid #ffeb3b;
     border-radius: 10px;
     width: 200px;
-    background-color: #fffacd; /* Amarelo bem claro, tipo creme */
-    color: #000000; /* Preto */
-    font-family: 'Annie Use Your Telescope', serif; /* Fonte Annie Use Your Telescope */
-    font-size: 24px; /* Aumentar o tamanho do texto dos botões */
+    background-color: #fffacd;
+    color: #000000;
+    font-family: 'Annie Use Your Telescope', serif;
+    font-size: 24px;
     cursor: pointer;
     margin: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombreamento */
-    white-space: nowrap; /* Impede quebra de linha */
-    display: block; /* Garantir que os botões fiquem em linha separada */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
 }
 
 button {
-    background-color: #add8e6; /* Azul bebê */
-    color: #ffffff; /* Branco */
-    text-shadow: 1px 1px 2px #000000; /* Contorno preto */
+    background-color: #add8e6; 
+    color: #ffffff; 
+    text-shadow: 1px 1px 2px #000000; 
 }
 
 button + button {
-    margin-top: 5px; /* Diminuir o espaço entre os botões */
+    margin-top: 5px;
 }
 
 button:hover {
-    background-color: #ffeb3b; /* Amarelo claro */
-    color: #ffffff; /* Branco */
+    background-color: #ffeb3b;
 }
 
 p#resultado {
-    margin-top: 40px; /* Aumentar a margem superior para mover o texto mais para baixo */
-    font-size: 22px; /* Aumentar o tamanho do texto */
-    color: #000000; /* Preto */
+    margin-top: 40px;
+    font-size: 22px;
+    color: #000000;
+}
+
+.mamadeira {
+    width: 270px;
+    height: 270px;
+    position: absolute;
+    z-index: -1;
+    left: 180px;
+    top: 70px;
+}
+
+footer {
+    bottom: 0;
+    border-top: 5px solid #ffeb3b; /* Borda amarela no rodapé */
 }
