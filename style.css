@@ -89,7 +89,7 @@ input[type="number"], button {
     background-color: #fffacd; /* Amarelo bem claro, tipo creme */
     color: #000000; /* Preto */
     font-family: 'Annie Use Your Telescope', serif; /* Fonte Annie Use Your Telescope */
-    font-size: 16px;
+    font-size: 18px; /* Aumentar o tamanho do texto dos botões */
     cursor: pointer;
     margin: 5px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombreamento */
