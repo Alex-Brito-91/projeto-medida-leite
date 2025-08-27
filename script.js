@@ -6,11 +6,9 @@ function calcularMedidas() {
         return;
     }
 
-    var resultado = quantidadeLeite / 15;
-    var resultadoFormatado = Math.round(resultado * 2) / 2; 
     var mlRestantes = 150 - quantidadeLeite;
-    var medidasRestantes = Math.floor(mlRestantes / 15);
-    var textoMedidasRestantes = `${medidasRestantes} medidas${mlRestantes % 15 >= 7.5 ? ' e meia' : ''}`;
+    var medidasRestantes = Math.floor(mlRestantes / 23.07);
+    var textoMedidasRestantes = `${medidasRestantes} medidas${mlRestantes % 23.07 >= 0.50 ? ' e meia' : ''}`;
 
     var resultadoTexto = `Faltam ${mlRestantes}ml (${textoMedidasRestantes}) para completar 150ml.`;
     document.getElementById('resultado').innerText = resultadoTexto;
