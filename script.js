@@ -7,8 +7,14 @@ function calcularMedidas() {
     }
 
     var mlRestantes = 150 - quantidadeLeite;
-    var medidasRestantes = Math.floor(mlRestantes / 23.07);
-    var textoMedidasRestantes = `${medidasRestantes} medidas${mlRestantes % 23.07 >= 0.50 ? ' e meia' : ''}`;
+    var medidasRestantes = mlRestantes / 23.07;
+    var resMedidasRestantes = (medidasRestantes % 1).toFixed(2);
+    var textoMedidasRestantes = '';
+    if (mlRestantes >= 20 && mlRestantes <= 25) {
+        textoMedidasRestantes = '1 medida';
+    } else {
+        textoMedidasRestantes = `${Math.floor(medidasRestantes)} medidas${resMedidasRestantes >= 0.44 ? ' e meia' : ''}`;
+    }
 
     var resultadoTexto = `Faltam ${mlRestantes}ml (${textoMedidasRestantes}) para completar 150ml.`;
     document.getElementById('resultado').innerText = resultadoTexto;
